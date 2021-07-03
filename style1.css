@@ -1,0 +1,570 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* Common Styling......... */
+:root {
+  --primary: #5ec576;
+  --primary-darker: #4bbb7d;
+  --white: #ffffff;
+  --light-color: #efeefc;
+  --sub-title-color: #c3c3c5;
+  --sub-title-alt-color: #5f5f5fca;
+  --title-color: #212123;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+.bg-gradient {
+  background-image: var(--gradient-primary);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: rgb(146, 146, 146);
+  z-index: 999999;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--title-color);
+}
+.sub-title {
+  color: var(--sub-title-alt-color);
+}
+section {
+  /* position: relative; */
+  padding: 3rem 6rem;
+  transition: transform 1s, opacity 1s;
+}
+
+.home,
+.header,
+.about,
+.skills,
+.projects,
+.contact {
+  /* margin-bottom: 3rem; */
+  margin-top: 6rem;
+}
+.btn {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 1rem;
+  padding: 0.3rem 0.8rem;
+  font-weight: 700;
+  background-color: var(--white);
+  border: 2px var(--primary) solid;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.btn i {
+  margin-left: 0.5rem;
+}
+.btn:hover {
+  transform: scale(110%);
+  background-color: var(--primary);
+  color: var(--white);
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/*...........NavBar Styling.................. */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: slategrey;
+  /* margin-bottom: 7rem; */
+}
+nav {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+.sticky nav {
+  padding: 0.5rem 3rem;
+}
+.brand-title a {
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.menu li {
+  margin-left: 0.5em;
+}
+.menu li a {
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.75em 1em;
+}
+.menu li a:hover {
+  color: var(--primary);
+  transition: color 500ms ease-in-out;
+}
+
+/* Home section Styling................................. */
+
+.home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-left {
+  width: 37%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+}
+.text-1 {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+.text-2 {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+.text-2 span {
+  font-weight: 600;
+  font-size: 4rem;
+}
+.text-3 {
+  margin: 0.5em 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.text-4 {
+  line-height: 1.5em;
+  text-align: justify;
+  margin-bottom: 4em;
+}
+.home-left button {
+  outline: none;
+}
+.text-5 {
+  /* width: 50%; */
+  text-align: center;
+}
+.home-right {
+  width: 55%;
+  justify-content: center;
+  padding: 3em 2em;
+}
+.home-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Styling About Me Section */
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-left {
+  width: 35%;
+}
+.about-right {
+  width: 55%;
+}
+.about-right h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.highlight {
+  padding: 5px 10px;
+  background-color: var(--light-color);
+}
+.about-right p {
+  text-indent: 50px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.about-left img {
+  width: 100%;
+  display: block;
+  border-radius: 60%;
+}
+/* Project Section */
+.project-1,
+.project-2,
+.project-3 {
+  padding: 0.5em;
+  align-self: stretch;
+}
+.project-image img {
+  width: 100%;
+  min-width: 200px;
+  display: block;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.project-description {
+  text-align: justify;
+}
+.projects-content {
+  grid-auto-flow: column;
+}
+.demo-btn {
+  justify-self: center;
+  align-self: end;
+}
+
+/* Skills Section */
+.skills-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills-right {
+  width: 45%;
+  margin-left: 2em;
+  padding: 2em;
+}
+.skills-left {
+  width: 50%;
+  padding: 1em;
+}
+.skills-img {
+  width: 100%;
+  display: block;
+  border-radius: 40%;
+}
+.bars {
+  margin-bottom: 1.5em;
+}
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info span {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.line {
+  height: 5px;
+  width: 100%;
+  background: rgb(165, 165, 165);
+  position: relative;
+}
+.line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  /* width: 100%; */
+  top: 0%;
+  bottom: 0;
+  background-color: var(--primary);
+}
+.html::before {
+  width: 90%;
+}
+.css::before {
+  width: 85%;
+}
+.js::before {
+  width: 88%;
+}
+.php::before {
+  width: 80%;
+}
+.bootstrap::before {
+  width: 70%;
+}
+.mysql::before {
+  width: 80%;
+}
+.python::before {
+  width: 80%;
+}
+/*  Contact Section............... */
+.contact-right,
+.contact-left {
+  width: 45%;
+  margin-bottom: 2rem;
+}
+.contact-left {
+  display: grid;
+  gap: 1rem;
+}
+.contact-info {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.contact-info i {
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: var(--primary);
+}
+.contact-info span {
+  display: block;
+}
+.contact-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.contact-input {
+  background-color: var(--light-color);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.contact-input input,
+.contact-input textarea {
+  width: 100%;
+  border: none;
+  background-color: var(--light-color);
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+footer {
+  padding: 2rem 4rem;
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Media Querries */
+@media (max-width: 1050px) {
+  section {
+    padding: 0 6rem;
+  }
+  .menu li a {
+    padding: 0;
+    justify-content: center;
+  }
+  .home {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4em;
+  }
+  .home-left {
+    width: 100%;
+    margin: 3em 0;
+  }
+  .text-1,
+  .text-2,
+  .text-3,
+  .text-4 {
+    text-align: center;
+  }
+  .home-right {
+    width: 80%;
+  }
+  .home-img {
+    transform: scale(120%, 120%);
+  }
+  .projects-content {
+    grid-auto-flow: row;
+  }
+  .project-title {
+    font-size: 1.2rem;
+  }
+  .about-content {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .about-right h3 {
+    font-size: 1.6rem;
+  }
+  .about .title {
+    margin-bottom: 0.5em;
+  }
+  .about-left {
+    width: 100%;
+  }
+  .about-right {
+    width: 80%;
+  }
+  .about-left img {
+    border-radius: 10px;
+    transform: scale(70%);
+  }
+  .skills-content {
+    flex-direction: column;
+  }
+  .skills-right {
+    width: 100%;
+
+    margin-left: 0;
+  }
+  .skills-left {
+    width: 100%;
+    padding: 0;
+  }
+  .bar {
+    padding: 2em;
+  }
+  .skills-img {
+    transform: scale(90%);
+    border-radius: 10px;
+  }
+  .contact-content {
+    flex-direction: column;
+  }
+  .contact-right,
+  .contact-left {
+    width: 80%;
+  }
+  .footer {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 730px) {
+  nav {
+    flex-direction: column;
+    padding: 0;
+  }
+  section {
+    padding: 0 5rem;
+  }
+  .home {
+    top: 6rem;
+  }
+  .text-1 {
+    margin-bottom: 0.5em;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    margin-bottom: 1.5em;
+    padding-bottom: 0;
+  }
+  section {
+    padding: 0 3rem;
+  }
+  .text-1,
+  .text-2,
+  .text-3,
+  .text-4,
+  .text-5 {
+    font-size: 0.8rem;
+  }
+  .text-2 span {
+    font-size: 2rem;
+  }
+  .main-title {
+    font-size: 1.5rem;
+    /* line-height: 2rem; */
+  }
+  .menu {
+    flex-direction: column;
+    padding: 0;
+  }
+  .sticky {
+    width: 100%;
+  }
+  .btn {
+    font-size: 0.8rem;
+  }
+  .home,
+  .header,
+  .about,
+  .skills {
+    margin-bottom: 2em;
+  }
+  .home-left {
+    margin-bottom: 2em;
+  }
+  .about.title {
+    border-bottom: 0;
+  }
+  .about-right h3 {
+    font-size: 1.2rem;
+  }
+  .home-left a {
+    font-size: 0.7rem;
+  }
+  .about-right h3 {
+    font-size: 1.5rem;
+  }
+  .about-right p {
+    font-size: 0.8rem;
+  }
+  .about-left img {
+    transform: scale(80%, 80%);
+  }
+  .skills-left {
+    width: 80%;
+    margin-left: 0;
+  }
+  .skills-right {
+    width: 80%;
+  }
+  .info span {
+    font-size: 0.8rem;
+  }
+  .skills-img {
+    transform: scale(100%);
+  }
+  .contact-title {
+    font-size: 1rem;
+  }
+  .contact-info i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .contact-sub {
+    font-size: 0.8rem;
+  }
+  .contact-input label {
+    font-size: 0.8rem;
+  }
+  .footer {
+    font-size: 0.6rem;
+  }
+}
